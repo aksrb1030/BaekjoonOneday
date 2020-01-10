@@ -18,4 +18,18 @@
 # 건물 W를 건설완료 하는데 드는 최소 시간을 출력한다. 편의상 건물을 짓는 명령을 내리는 데는 시간이 소요되지 않는다고 가정한다.
 # 모든 건물을 지을 수 없는 경우는 없다.
 
-T = input()
+T = int(input()) # 테스트 케이스 T
+
+for _ in range(T):
+    N, K= map(int,input().split())  #건물개수 N, 건물간의 규칙 K
+    D = list(map(int,input().split())) # 시간 D
+
+    do_list = []
+
+    for _ in range(N):
+        X, Y= map(int,input().split())
+        do_list.append([X, Y])
+
+    W = list(map(int,input().split()))  # 목표 건물 번호 W
+    
+    
